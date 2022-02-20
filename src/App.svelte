@@ -3,10 +3,6 @@
   let dna = "";
 </script>
 
-<svelte:head>
-  <base href="https://thelostlambda.github.io/igem-toolbox-testing/">
-</svelte:head>
-
 <main>
   <h1>Count Bases</h1>
   <input bind:value={dna} />
