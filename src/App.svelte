@@ -1,15 +1,12 @@
 <script lang="ts">
-  import wasm from "../wasm-syn-zeug/Cargo.toml";
+  export let wasm;
   let dna = "";
 </script>
 
 <main>
   <h1>Count Bases</h1>
-  <input bind:value={dna} />
-  <!-- Ngl to you dawg, this is unbelievably fucked -->
-  {#await wasm( { serverPath: "build/assets/" } ).then( (w) => w.count_bases(dna) ) then count}
-    <p>{count}</p>
-  {/await}
+  <input bind:value={dna}/>
+  <p>{wasm.count_bases(dna)}</p>
 </main>
 
 <style>

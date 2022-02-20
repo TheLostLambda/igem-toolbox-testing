@@ -68,7 +68,7 @@ export default {
 
     // Add Rust WASM support
     rust({
-      serverPath: 'build/assets'
+      serverPath: 'build/'
     }),
 
     // In dev mode, call `npm run start` once
